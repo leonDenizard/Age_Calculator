@@ -10,24 +10,62 @@
     <title>Frontend Mentor | Age calculator app</title>
 
   </head>
-  <body class="bg-neutral-light-grey">
+  <body class="bg-neutral-light-grey flex justify-center items-center min-h-screen">
 
     <section>
       <div class="wrapper-date">
         <div class="day">
           <p>day</p>
           <input type="text" name="dd" id="dd">
+          <p>Must be a valid day</p>
         </div>
 
         <div class="month">
           <p>month</p>
           <input type="text" name="month" id="month">
+          <p>Must be a valid month</p>
         </div>
 
         <div class="year">
           <p>year</p>
           <input type="text" name="year" id="year">
+          <p>Must be in the past</p>
         </div>
+      </div>
+
+      <div class="wrapper-datail">
+        <div class="line"></div>
+        <div class="icon">
+          <img src="./assets/images/icon-arrow.svg" alt="icon-arrow">
+        </div>
+      </div>
+
+      <div class="wrapper-result">
+        
+        <div class="result-years">
+          <div class="detail-years">
+            <span>-</span>
+            <span>-</span>
+          </div>
+          <h2>Years</h2>
+        </div>
+
+        <div class="result-months">
+          <div class="detail-months">
+            <span>-</span>
+            <span>-</span>
+          </div>
+          <h2>months</h2>
+        </div>
+
+        <div class="result-days">
+          <div class="detail-days">
+            <span>-</span>
+            <span>-</span>
+          </div>
+          <h2>days</h2>
+        </div>
+
       </div>
     </section>
     
