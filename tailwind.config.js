@@ -25,6 +25,10 @@ module.exports = {
         '400i': '400 italic',
         '700': '700',
         '800': '800 italic',
+      },
+
+      screens: {
+        'custom': '468px',
       }
     },
   },
