@@ -11,53 +11,115 @@ const yearRegex = /^\d{4}$/
 
 
 const divIcon = document.querySelector('.icon')
-divIcon.addEventListener('click', ()=>{
-    validateInput()
+divIcon.addEventListener('click', () => {
+  validateInput()
 })
 
-function validateInput(){
+function validateInput() {
+  const day = inputDay.value
+  const month = inputMonth.value
+  const year = inputYear.value
 
-    const day = inputDay.value
-    const month = inputMonth.value
-    const year = inputYear.value
+  let isValid = true
 
-    const errorDay = document.querySelector('.error-day')
-    const titleDay = document.querySelector('.error-text-day')
+  if (!validateDay(day)) {
+    isValid = false
+  }
 
-    const errorMonth = document.querySelector('.error-month')
-    const titleMonth = document.querySelector('error-text-month')
-    
-    const divDetailDay = document.querySelector('.detail-days')
-    
+  if (!validateMonth(month)) {
+    isValid = false
+  }
 
-    if(!dayRegex.test(day)){
+  if(!validateYear(year)){
+    isValid = false
+  }
 
-        errorDay.classList.remove('opacity-0')
-        inputDay.classList.remove('border-neutral-off-white')
-        inputDay.classList.add('border-primary-light-red')
-        titleDay.classList.remove('text-neutral-smoke-grey')
-        titleDay.classList.add('text-primary-light-red')
+  if (!isValid) {
+    return
+  }
 
-        setTimeout(()=>{
-            errorDay.classList.add('opacity-0')
-            inputDay.classList.remove('border-primary-light-red')
-            inputDay.classList.add('border-neutral-off-white')
-            titleDay.classList.remove('text-primary-light-red')
-            titleDay.classList.add('text-neutral-smoke-grey')
-        }, 2000)
+  // Restante do código caso todos os campos sejam válidos
+  // ...
 
-        return day
+  console.log(day)
+}
 
-    }
+function validateDay(day) {
+  const errorDay = document.querySelector('.error-day')
+  const titleDay = document.querySelector('.error-text-day')
 
-    if(!monthRegex.test(month)){
+  if (!dayRegex.test(day)) {
+    errorDay.classList.remove('opacity-0')
+    inputDay.classList.remove('border-neutral-off-white')
+    inputDay.classList.add('border-primary-light-red')
+    titleDay.classList.remove('text-neutral-smoke-grey')
+    titleDay.classList.add('text-primary-light-red')
 
+    setTimeout(() => {
+      errorDay.classList.add('opacity-0')
+      inputDay.classList.remove('border-primary-light-red')
+      inputDay.classList.add('border-neutral-off-white')
+      titleDay.classList.remove('text-primary-light-red')
+      titleDay.classList.add('text-neutral-smoke-grey')
+    }, 2000)
+
+    return false
+  }
+
+  return true
+}
+
+function validateMonth(month) {
+  const errorMonth = document.querySelector('.error-month')
+  const titleMonth = document.querySelector('.error-text-month')
+
+  if (!monthRegex.test(month)) {
+    errorMonth.classList.remove('opacity-0')
+    inputMonth.classList.remove('border-neutral-off-white')
+    inputMonth.classList.add('border-primary-light-red')
+    titleMonth.classList.remove('text-neutral-smoke-grey')
+    titleMonth.classList.add('text-primary-light-red')
+
+    setTimeout(() => {
+      errorMonth.classList.add('opacity-0')
+      inputMonth.classList.remove('border-primary-light-red')
+      inputMonth.classList.add('border-neutral-off-white')
+      titleMonth.classList.remove('text-primary-light-red')
+      titleMonth.classList.add('text-neutral-smoke-grey')
+    }, 2000)
+
+    return false
+  }
+
+  return true
+}
+
+function validateYear(year){
+
+    const errorYear = document.querySelector('.error-year')
+    const titleYear = document.querySelector('.error-text-year')
+
+    if(!yearRegex.test(year)){
         
-
-        return month
-    }
-    console.log(day)
+        errorYear.classList.remove('opacity-0')
+        inputYear.classList.remove('border-neutral-off-white')
+        inputYear.classList.add('border-primary-light-red')
+        titleYear.classList.remove('text-neutral-smoke-grey')
+        titleYear.classList.add('text-primary-light-red')
     
+        setTimeout(() => {
+        errorYear.classList.add('opacity-0')
+          inputYear.classList.remove('border-primary-light-red')
+          inputYear.classList.add('border-neutral-off-white')
+          titleYear.classList.remove('text-primary-light-red')
+          titleYear.classList.add('text-neutral-smoke-grey')
+        }, 2000)
+    
+        return false
+
+    }
+
+    return true
 }
 
 
