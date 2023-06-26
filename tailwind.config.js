@@ -28,7 +28,10 @@ module.exports = {
       },
 
       screens: {
-        'custom': '468px',
+        'sm': '640px',     // Exemplo de breakpoint para telas pequenas (smartphones)
+        'md': '768px',     // Exemplo de breakpoint para telas médias (tablets)
+        'lg': '1024px',    // Exemplo de breakpoint para telas grandes (desktops)
+        'xl': '1280px',   
       }
     },
   },

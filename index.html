@@ -12,30 +12,30 @@
   </head>
   <body class="bg-neutral-light-grey flex justify-center items-center min-h-screen">
 
-    <section class="bg-neutral-white w-80 p-6 relative">
+    <section class="bg-neutral-white w-80 p-6 relative rounded-3xl">
       <div class="wrapper-date flex w-full">
         <div class="day flex flex-col">
-          <p class="uppercase text-neutral-smoke-grey font-bold tracking-widest">day</p>
-          <input class="w-20 max-w-xs mt-1 border border-solid border-neutral-off-white text-2xl p-2 rounded-lg outline-none font-bold text-neutral-off-black" type="text" name="dd" id="dd">
+          <p class="uppercase text-neutral-smoke-grey text-sm font-bold tracking-widest">day</p>
+          <input class="w-16 max-w-xs mt-1 border border-solid border-neutral-off-white text-2xl p-2 rounded-lg outline-none font-bold text-neutral-off-black" type="text" name="dd" id="dd" placeholder="DD">
           <p class="text-primary-light-red text-xs italic mt-1 opacity-0">Must be a valid day</p>
         </div>
 
         <div class="month flex flex-col">
-          <p class="uppercase text-neutral-smoke-grey font-bold tracking-widest">month</p>
-          <input class="w-20 max-w-xs mt-1 border border-solid border-neutral-off-white text-2xl p-2 rounded-lg outline-none font-bold text-neutral-off-black" type="text" name="month" id="month">
+          <p class="uppercase text-neutral-smoke-grey text-sm font-bold tracking-widest">month</p>
+          <input class="w-16 max-w-xs mt-1 border border-solid border-neutral-off-white text-2xl p-2 rounded-lg outline-none font-bold text-neutral-off-black" type="text" name="month" id="month" placeholder="MM">
           <p class="text-primary-light-red text-xs italic mt-1 opacity-0">Must be a valid month</p>
         </div>
 
         <div class="year flex flex-col">
-          <p class="uppercase text-neutral-smoke-grey font-bold tracking-widest">year</p>
-          <input class="w-20 max-w-xs mt-1 border border-solid border-neutral-off-white text-2xl p-2 rounded-lg outline-none font-bold text-neutral-off-black" type="text" name="year" id="year">
+          <p class="uppercase text-neutral-smoke-grey text-sm font-bold tracking-widest">year</p>
+          <input class="w-24 max-w-xs mt-1 border border-solid border-neutral-off-white text-2xl p-2 rounded-lg outline-none font-bold text-neutral-off-black" type="text" name="year" id="year" placeholder="YYYY">
           <p class="text-primary-light-red text-xs italic mt-1 opacity-0">Must be in the past</p>
         </div>
       </div>
 
-      <div class="wrapper-datail">
-        <div class="line"></div>
-        <div class="icon">
+      <div class="wrapper-datail w-full relative top-2">
+        <div class="line w-full h-px bg-neutral-off-white"></div>
+        <div class="icon bg-primary-purple w-12 rounded-full p-3 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <img src="./assets/images/icon-arrow.svg" alt="icon-arrow">
         </div>
       </div>
