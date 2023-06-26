@@ -8,30 +8,15 @@
     <link rel="stylesheet" href="./styles/dist/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
     <title>Frontend Mentor | Age calculator app</title>
-
-    <style>
-      .skew-container {
-        transform: skew(-20deg); /* Aplica a inclinação para a direita */
-      }
-      
-      .skew-container span {
-        display: inline-block;
-        width: 20px;
-        height: 8px;
-        background-color: hsl(259, 100%, 65%);
-        margin-right: 10px; /* Espaçamento entre os pontos */
-      }
-      </style>
-
   </head>
   <body class="bg-neutral-light-grey flex justify-center items-center min-h-screen">
 
     <section class="bg-neutral-white w-80 p-6 relative rounded-3xl rounded-br-7xl">
       <div class="wrapper-date flex w-full">
         <div class="day flex flex-col">
-          <p class="uppercase text-neutral-smoke-grey text-sm font-bold tracking-widest">day</p>
+          <p class="error-text-day uppercase text-neutral-smoke-grey text-sm font-bold tracking-widest">day</p>
           <input class="w-16 max-w-xs mt-1 border border-solid border-neutral-off-white text-2xl p-2 rounded-lg outline-none font-bold text-neutral-off-black" type="text" name="dd" id="dd" placeholder="DD">
-          <p class="text-primary-light-red text-xs italic mt-1 opacity-0">Must be a valid day</p>
+          <p class="text-primary-light-red text-xs italic mt-1 opacity-0 erro-day">Must be a valid day</p>
         </div>
 
         <div class="month flex flex-col">
@@ -83,6 +68,6 @@
       </div>
     </section>
     
-    
+    <script src="./src/index.js"></script>
   </body>
 </html>
