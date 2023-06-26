@@ -38,10 +38,30 @@ function validateInput() {
     return
   }
 
-  // Restante do código caso todos os campos sejam válidos
-  // ...
+  const dataNascimento = `${year}-${month}-${day}`
 
-  console.log(day)
+  console.log(dataNascimento)
+  
+  
+  const idade = calcularIdade(dataNascimento)
+
+  console.log(idade.anos, idade.meses, idade.dias)
+  
+  const detailYear = document.querySelector('.detail-years')
+  detailYear.innerHTML = ''
+
+  createResult(idade.anos, detailYear)
+
+  const detailMonths = document.querySelector('.detail-months')
+  detailMonths.innerHTML = ''
+
+  createResult(idade.meses, detailMonths)
+
+  const detailDays = document.querySelector('.detail-days')
+  detailDays.innerHTML = ''
+
+  createResult(idade.dias, detailDays)
+
 }
 
 function validateDay(day) {
@@ -122,6 +142,17 @@ function validateYear(year){
     return true
 }
 
+function createResult(text, parentChild){
+
+    const h2 = document.createElement('h2')
+    h2.textContent = text
+    h2.classList.add('text-primary-purple')
+    h2.classList.add('text-5xl')
+    h2.classList.add('font-extrabold')
+
+    parentChild.appendChild(h2)
+}
+
 
 function calcularIdade(dataNascimento) {
     const dataAtual = new Date()
@@ -129,17 +160,15 @@ function calcularIdade(dataNascimento) {
   
     // Calcula a diferença em milissegundos entre as datas
     const diferenca = dataAtual - nascimento
-    
+  
     // Converte a diferença em anos, meses e dias
     const idade = {}
     idade.anos = Math.floor(diferenca / (1000 * 60 * 60 * 24 * 365.25))
-    idade.meses = Math.floor((diferenca % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * (365.25 / 12)))
-    idade.dias = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60 * 24))
+
+    const mesesRestantes = (diferenca % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * (365.25 / 12))
+    
+    idade.meses = Math.floor(mesesRestantes)
+    idade.dias = Math.floor((mesesRestantes % 1) * (365.25 / 12))
   
     return idade
-  }
-  
-  // Exemplo de uso
-  const dataNascimento = "1992-04-12";
-  const idade = calcularIdade(dataNascimento);
-  
+}
