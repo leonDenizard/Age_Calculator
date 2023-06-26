@@ -24,15 +24,25 @@ module.exports = {
       fontWeight: {
         '400i': '400 italic',
         '700': '700',
-        '800': '800 italic',
+        '800i': '800 italic',
       },
 
       screens: {
-        'sm': '640px',     // Exemplo de breakpoint para telas pequenas (smartphones)
-        'md': '768px',     // Exemplo de breakpoint para telas médias (tablets)
-        'lg': '1024px',    // Exemplo de breakpoint para telas grandes (desktops)
+        'sm': '640px',     
+        'md': '768px',     
+        'lg': '1024px',    
         'xl': '1280px',   
       }
+    },
+
+    borderRadius: {
+      '3xl': '1.5rem',
+      '7xl': '5rem',   
+      'lg': '0.5rem',
+      'full': '999px'
+    },
+    skew: {
+      '20': '-20deg',
     },
   },
   plugins: [],

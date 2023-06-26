@@ -9,10 +9,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
     <title>Frontend Mentor | Age calculator app</title>
 
+    <style>
+      .skew-container {
+        transform: skew(-20deg); /* Aplica a inclinação para a direita */
+      }
+      
+      .skew-container span {
+        display: inline-block;
+        width: 20px;
+        height: 8px;
+        background-color: hsl(259, 100%, 65%);
+        margin-right: 10px; /* Espaçamento entre os pontos */
+      }
+      </style>
+
   </head>
   <body class="bg-neutral-light-grey flex justify-center items-center min-h-screen">
 
-    <section class="bg-neutral-white w-80 p-6 relative rounded-3xl">
+    <section class="bg-neutral-white w-80 p-6 relative rounded-3xl rounded-br-7xl">
       <div class="wrapper-date flex w-full">
         <div class="day flex flex-col">
           <p class="uppercase text-neutral-smoke-grey text-sm font-bold tracking-widest">day</p>
@@ -40,30 +54,30 @@
         </div>
       </div>
 
-      <div class="wrapper-result">
+      <div class="relative top-10 mb-9">
         
-        <div class="result-years">
-          <div class="detail-years">
-            <span>-</span>
-            <span>-</span>
+        <div class="result-years flex items-center gap-4">
+          <div class="detail-years skew-x-20 flex gap-2">
+            <span class="bg-primary-purple inline-block w-5 h-2"></span>
+            <span class="bg-primary-purple inline-block w-5 h-2"></span>
           </div>
-          <h2>Years</h2>
+          <h2 class="text-neutral-off-black text-4xl font-extrabold italic">Years</h2>
         </div>
 
-        <div class="result-months">
-          <div class="detail-months">
-            <span>-</span>
-            <span>-</span>
+        <div class="result-months flex items-center gap-4">
+          <div class="detail-months skew-x-20 flex gap-2">
+            <span class="bg-primary-purple inline-block w-5 h-2"></span>
+            <span class="bg-primary-purple inline-block w-5 h-2"></span>
           </div>
-          <h2>months</h2>
+          <h2 class="text-neutral-off-black text-4xl font-extrabold italic">months</h2>
         </div>
 
-        <div class="result-days">
-          <div class="detail-days">
-            <span>-</span>
-            <span>-</span>
+        <div class="result-days flex items-center gap-4">
+          <div class="detail-days skew-x-20 flex gap-2">
+            <span class="bg-primary-purple inline-block w-5 h-2"></span>
+            <span class="bg-primary-purple inline-block w-5 h-2"></span>
           </div>
-          <h2>days</h2>
+          <h2 class="text-neutral-off-black text-4xl font-extrabold italic">days</h2>
         </div>
 
       </div>
