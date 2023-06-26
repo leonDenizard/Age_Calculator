@@ -21,8 +21,14 @@ function validateInput(){
     const month = inputMonth.value
     const year = inputYear.value
 
-    const errorDay = document.querySelector('.erro-day')
+    const errorDay = document.querySelector('.error-day')
     const titleDay = document.querySelector('.error-text-day')
+
+    const errorMonth = document.querySelector('.error-month')
+    const titleMonth = document.querySelector('error-text-month')
+    
+    const divDetailDay = document.querySelector('.detail-days')
+    
 
     if(!dayRegex.test(day)){
 
@@ -39,12 +45,39 @@ function validateInput(){
             titleDay.classList.remove('text-primary-light-red')
             titleDay.classList.add('text-neutral-smoke-grey')
         }, 2000)
-    }
 
+        return day
+
+    }
 
     if(!monthRegex.test(month)){
+
         
+
+        return month
     }
-    
+    console.log(day)
     
 }
+
+
+function calcularIdade(dataNascimento) {
+    const dataAtual = new Date()
+    const nascimento = new Date(dataNascimento)
+  
+    // Calcula a diferença em milissegundos entre as datas
+    const diferenca = dataAtual - nascimento
+    
+    // Converte a diferença em anos, meses e dias
+    const idade = {}
+    idade.anos = Math.floor(diferenca / (1000 * 60 * 60 * 24 * 365.25))
+    idade.meses = Math.floor((diferenca % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * (365.25 / 12)))
+    idade.dias = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60 * 24))
+  
+    return idade
+  }
+  
+  // Exemplo de uso
+  const dataNascimento = "1992-04-12";
+  const idade = calcularIdade(dataNascimento);
+  
