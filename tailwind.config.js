@@ -36,6 +36,7 @@ module.exports = {
     },
 
     borderRadius: {
+      '2xl': '1rem',
       '3xl': '1.5rem',
       '7xl': '5rem',   
       'lg': '0.5rem',

@@ -11,30 +11,30 @@
   </head>
   <body class="bg-neutral-light-grey flex justify-center items-center min-h-screen">
 
-    <section class="bg-neutral-white w-80 p-6 relative rounded-3xl rounded-br-7xl">
-      <div class="wrapper-date flex w-full">
+    <section class="bg-neutral-white w-80 p-6 relative rounded-3xl rounded-br-7xl lg:w-2/6 lg:rounded-2xl lg:rounded-br-7xl">
+      <div class="wrapper-date flex w-full lg:gap-7">
         <div class="day flex flex-col">
           <p class="error-text-day uppercase text-neutral-smoke-grey text-sm font-bold tracking-widest">day</p>
           <input class="w-16 max-w-xs mt-1 border border-solid border-neutral-off-white text-2xl p-2 rounded-lg outline-none font-bold text-neutral-off-black" type="text" name="dd" id="dd" placeholder="DD">
-          <p class="error-day text-primary-light-red text-xs italic mt-1 opacity-0">Must be a valid day</p>
+          <p class="error-day text-primary-light-red text-xs italic mt-1 opacity-0 w-auto">Must be a valid day</p>
         </div>
 
         <div class="month flex flex-col">
           <p class="error-text-month uppercase text-neutral-smoke-grey text-sm font-bold tracking-widest">month</p>
           <input class="w-16 max-w-xs mt-1 border border-solid border-neutral-off-white text-2xl p-2 rounded-lg outline-none font-bold text-neutral-off-black" type="text" name="month" id="month" placeholder="MM">
-          <p class="error-month text-primary-light-red text-xs italic mt-1 opacity-0">Must be a valid month</p>
+          <p class="error-month text-primary-light-red text-xs italic mt-1 opacity-0 w-auto">Must be a valid month</p>
         </div>
 
         <div class="year flex flex-col">
           <p class="error-text-year uppercase text-neutral-smoke-grey text-sm font-bold tracking-widest">year</p>
           <input class="w-24 max-w-xs mt-1 border border-solid border-neutral-off-white text-2xl p-2 rounded-lg outline-none font-bold text-neutral-off-black" type="text" name="year" id="year" placeholder="YYYY">
-          <p class="error-year text-primary-light-red text-xs italic mt-1 opacity-0">Must be in the past</p>
+          <p class="error-year text-primary-light-red text-xs italic mt-1 opacity-0 w-auto">Must be in the past</p>
         </div>
       </div>
 
-      <div class="wrapper-datail w-full relative top-6">
+      <div class="wrapper-datail w-full relative top-6 lg:flex lg:items-center">
         <div class="line w-full h-px bg-neutral-off-white"></div>
-        <div class="icon bg-primary-purple w-12 rounded-full p-3 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer">
+        <div class="icon bg-primary-purple w-12 rounded-full p-3 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer lg:static lg:translate-x-0 lg:translate-y-0">
           <img src="./assets/images/icon-arrow.svg" alt="icon-arrow">
         </div>
       </div>
